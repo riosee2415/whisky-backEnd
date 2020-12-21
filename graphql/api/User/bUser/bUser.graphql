@@ -1,0 +1,9 @@
+type Query {
+  getAllBUser(searchName: String!): [BUser!]!
+}
+
+type Mutation {
+  modifyExitBUser(id: String!): Boolean!
+  modifyBlackBUser(id: String!): Boolean!
+  modifyAssignMentBUser(id: String!): Boolean!
+}

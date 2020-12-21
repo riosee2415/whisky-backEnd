@@ -1,0 +1,29 @@
+type Query {
+  getUserForId(id: String!, password: String!): User!
+  requestSecretId(ownerName: String!, bCode: String!): BUser
+  getBUsersByBlack(searchValue: String!): [BUser!]!
+  getBUsersByExit(searchValue: String!): [BUser!]!
+}
+
+type Mutation {
+  requestSecretPw(userId: String!, name: String!, email: String!): Boolean!
+  confirmSecret(secret: String!, name: String!, email: String!): String!
+  updateUserPassword(password: String!, userId: String!): Boolean!
+  cancelExitBUser(id: String!): Boolean!
+  exitBUser(id: String!): Boolean!
+  blackBUser(id: String!): Boolean!
+  cancelblackBUser(id: String!): Boolean!
+  createBUser(
+    userId: String!
+    userPassword: String!
+    username: String!
+    zoneCode: String!
+    address: String!
+    detailAddress: String!
+    tel: String!
+    mobile: String!
+    email: String!
+    isAgreement1: Boolean!
+    isAgreement2: Boolean!
+  ): Boolean!
+}
