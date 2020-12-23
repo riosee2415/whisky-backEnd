@@ -163,3 +163,23 @@ type EventBoard {
   deletedAt: String!
   hit: Int!
 }
+
+type DetailBanner {
+  _id: ID!
+  imagePath: String!
+  title: String!
+  content: String!
+  sort: Int!
+}
+
+type DirectRequest {
+  _id: ID!
+  name: String!
+  email: String!
+  mobile: String!
+  description: String!
+  isComplete: Boolean!
+  createdAt: String!
+  completedAt: String!
+  memo: String!
+}
