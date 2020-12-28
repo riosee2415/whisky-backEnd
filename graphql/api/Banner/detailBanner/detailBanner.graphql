@@ -1,5 +1,6 @@
 type Query {
   getAllDetailBanner: [DetailBanner!]!
+  getDetailBanner(id: String!): DetailBanner!
 }
 type Mutation {
   modifyDetail(
