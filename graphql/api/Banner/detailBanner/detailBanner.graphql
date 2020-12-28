@@ -1,3 +1,29 @@
 type Query {
   getAllDetailBanner: [DetailBanner!]!
 }
+type Mutation {
+  modifyDetail(
+    id: String!
+    topDescription: String!
+    writerDescription1: String!
+    writerDescription2: String!
+    drinkTitle: String!
+    drinkSubTitle: String!
+    drinkContent: String!
+  ): Boolean!
+
+  modifyDetailBannerTopBannerPath(id: String!, topBannerPath: String!): Boolean!
+  modifyDetailBannerWriterImagePath1(
+    id: String!
+    writerImagePath1: String!
+  ): Boolean!
+  modifyDetailBannerWriterImagePath2(
+    id: String!
+    writerImagePath2: String!
+  ): Boolean!
+  modifyDetailBannerDrinkImagePath(
+    id: String!
+    drinkImagePath: String!
+  ): Boolean!
+  modifyDetailBannerVideoPath(id: String!, videoPath: String!): Boolean!
+}

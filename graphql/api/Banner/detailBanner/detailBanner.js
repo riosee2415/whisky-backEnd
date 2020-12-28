@@ -19,4 +19,98 @@ export default {
       }
     },
   },
+
+  Mutation: {
+    modifyDetail: async (_, args) => {
+      const { id } = args;
+
+      try {
+        const result = await Detail.update({ _id: id });
+
+        return true;
+      } catch (e) {
+        return false;
+      }
+    },
+    modifyDetailBannerTopBannerPath: async (_, args) => {
+      const { id, topBannerPath } = args;
+
+      try {
+        const result = await DetailBanner.update(
+          { _id: id },
+          {
+            topBannerPath,
+          }
+        );
+
+        return true;
+      } catch (e) {
+        return false;
+      }
+    },
+    modifyDetailBannerWriterImagePath1: async (_, args) => {
+      const { id, writerImagePath1 } = args;
+
+      try {
+        const result = await DetailBanner.update(
+          { _id: id },
+          {
+            writerImagePath1,
+          }
+        );
+
+        return true;
+      } catch (e) {
+        return false;
+      }
+    },
+    modifyDetailBannerWriterImagePath2: async (_, args) => {
+      const { id, writerImagePath2 } = args;
+
+      try {
+        const result = await DetailBanner.update(
+          { _id: id },
+          {
+            writerImagePath2,
+          }
+        );
+
+        return true;
+      } catch (e) {
+        return false;
+      }
+    },
+    modifyDetailBannerDrinkImagePath: async (_, args) => {
+      const { id, drinkImagePath } = args;
+
+      try {
+        const result = await DetailBanner.update(
+          { _id: id },
+          {
+            drinkImagePath,
+          }
+        );
+
+        return true;
+      } catch (e) {
+        return false;
+      }
+    },
+    modifyDetailBannerVideoPath: async (_, args) => {
+      const { id, videoPath } = args;
+
+      try {
+        const result = await DetailBanner.update(
+          { _id: id },
+          {
+            videoPath,
+          }
+        );
+
+        return true;
+      } catch (e) {
+        return false;
+      }
+    },
+  },
 };
