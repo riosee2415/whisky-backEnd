@@ -171,6 +171,7 @@ type DetailBanner {
   writerImagePath1: String!
   writerImagePath2: String!
   writerDescription1: String!
+  writerTitle: String!
   writerDescription2: String!
   qnaList: [WriterQna!]!
   drinkImagePath: String!

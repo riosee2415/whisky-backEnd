@@ -40,12 +40,40 @@ export default {
 
   Mutation: {
     modifyDetail: async (_, args) => {
-      const { id } = args;
+      const {
+        id,
+        topDescription,
+        writerDescription1,
+        writerDescription2,
+        drinkTitle,
+        drinkSubTitle,
+        drinkContent,
+        topBannerPath,
+        writerImagePath1,
+        writerImagePath2,
+        drinkImagePath,
+        videoPath,
+      } = args;
 
       try {
-        const newContent = content.replace(/\n/g, "<br />");
-
-        const result = await Detail.update({ _id: id });
+        const result = await DetailBanner.updateOne(
+          { _id: id },
+          {
+            $set: {
+              topDescription,
+              writerDescription1,
+              writerDescription2,
+              drinkTitle,
+              drinkSubTitle,
+              drinkContent,
+              topBannerPath,
+              writerImagePath1,
+              writerImagePath2,
+              drinkImagePath,
+              videoPath,
+            },
+          }
+        );
 
         return true;
       } catch (e) {

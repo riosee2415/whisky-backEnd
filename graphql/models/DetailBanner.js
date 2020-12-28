@@ -24,6 +24,10 @@ const DetailBanner = new Schema(
       type: String,
       required: true,
     },
+    writerTitle: {
+      type: String,
+      required: true,
+    },
     writerDescription2: {
       type: String,
       required: true,

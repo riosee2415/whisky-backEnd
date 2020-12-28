@@ -11,6 +11,11 @@ type Mutation {
     drinkTitle: String!
     drinkSubTitle: String!
     drinkContent: String!
+    topBannerPath: String!
+    writerImagePath1: String!
+    writerImagePath2: String!
+    drinkImagePath: String!
+    videoPath: String!
   ): Boolean!
 
   modifyDetailBannerTopBannerPath(id: String!, topBannerPath: String!): Boolean!
