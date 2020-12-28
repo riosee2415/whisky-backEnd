@@ -25,6 +25,8 @@ export default {
       const { id } = args;
 
       try {
+        const newContent = content.replace(/\n/g, "<br />");
+
         const result = await Detail.update({ _id: id });
 
         return true;
