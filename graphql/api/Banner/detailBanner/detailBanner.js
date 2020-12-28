@@ -18,5 +18,23 @@ export default {
         return [];
       }
     },
+
+    getDetailBanner: async (_, args) => {
+      const { id } = args;
+
+      try {
+        const result = await DetailBanner.findOne({
+          _id: id,
+        }).populate({
+          path: `qnaList`,
+          model: WriterQna,
+        });
+
+        return result;
+      } catch (e) {
+        console.log(e);
+        return {};
+      }
+    },
   },
 };
