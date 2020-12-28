@@ -166,10 +166,25 @@ type EventBoard {
 
 type DetailBanner {
   _id: ID!
-  imagePath: String!
-  title: String!
-  content: String!
+  topBannerPath: String!
+  topDescription: String!
+  writerImagePath1: String!
+  writerImagePath2: String!
+  writerDescription1: String!
+  writerDescription2: String!
+  qnaList: [WriterQna!]!
+  drinkImagePath: String!
+  drinkTitle: String!
+  drinkSubTitle: String!
+  drinkContent: String!
+  videoPath: String!
   sort: Int!
+}
+
+type WriterQna {
+  _id: String!
+  asked: String!
+  answer: String!
 }
 
 type DirectRequest {

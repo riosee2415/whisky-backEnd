@@ -4,16 +4,53 @@ const Schema = mongoose.Schema;
 
 const DetailBanner = new Schema(
   {
-    title: {
+    topBannerPath: {
       type: String,
       required: true,
     },
-    content: {
+    topDescription: {
       type: String,
       required: true,
     },
-
-    imagePath: {
+    writerImagePath1: {
+      type: String,
+      required: true,
+    },
+    writerImagePath2: {
+      type: String,
+      required: true,
+    },
+    writerDescription1: {
+      type: String,
+      required: true,
+    },
+    writerDescription2: {
+      type: String,
+      required: true,
+    },
+    qnaList: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: `WriterQna`,
+      },
+    ],
+    drinkImagePath: {
+      type: String,
+      required: true,
+    },
+    drinkTitle: {
+      type: String,
+      required: true,
+    },
+    drinkSubTitle: {
+      type: String,
+      required: true,
+    },
+    drinkContent: {
+      type: String,
+      required: true,
+    },
+    videoPath: {
       type: String,
       required: true,
     },

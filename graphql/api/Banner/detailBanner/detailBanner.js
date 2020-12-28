@@ -1,45 +1,21 @@
 import DetailBanner from "../../../models/DetailBanner";
+import WriterQna from "../../../models/WriterQna";
 
 export default {
   Query: {
-    getDetailBanner: async (_, args) => {
+    getAllDetailBanner: async (_, args) => {
       try {
-        const result = await DetailBanner.find().sort({ sort: 1 });
+        const result = await DetailBanner.find()
+          .populate({
+            path: `qnaList`,
+            model: WriterQna,
+          })
+          .sort({ sort: 1 });
 
         return result;
       } catch (e) {
+        console.log(e);
         return [];
-      }
-    },
-  },
-
-  Mutation: {
-    modifyDetailBanner: async (_, args) => {
-      const { id, title, content } = args;
-
-      try {
-        const newContent = content.replace(/\n/g, "<br />");
-
-        const result = await DetailBanner.update(
-          { _id: id },
-          { title, content: newContent }
-        );
-
-        return true;
-      } catch (e) {
-        return false;
-      }
-    },
-
-    modifyDetailBannerImagePath: async (_, args) => {
-      const { id, imagePath } = args;
-
-      try {
-        const result = await DetailBanner.update({ _id: id }, { imagePath });
-
-        return true;
-      } catch (e) {
-        return false;
       }
     },
   },

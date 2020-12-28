@@ -1,8 +1,3 @@
 type Query {
-  getDetailBanner: [DetailBanner!]!
-}
-
-type Mutation {
-  modifyDetailBanner(id: String!, title: String!, content: String!): Boolean!
-  modifyDetailBannerImagePath(id: String!, imagePath: String!): Boolean!
+  getAllDetailBanner: [DetailBanner!]!
 }
