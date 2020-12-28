@@ -1,0 +1,4 @@
+type Mutation {
+  modifyQnaInDetail(id: String!, asked: String!, answer: String!): Boolean!
+  createQnaInDetail(pid: String!, asked: String!, answer: String!): Boolean!
+}
