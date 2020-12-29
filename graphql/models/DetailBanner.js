@@ -78,6 +78,15 @@ const DetailBanner = new Schema(
       type: Number,
       required: true,
     },
+    type: {
+      type: Number,
+      required: true,
+    },
+    isPrepare: {
+      type: Boolean,
+      required: true,
+      default: true,
+    },
   },
   {
     versionKey: false,

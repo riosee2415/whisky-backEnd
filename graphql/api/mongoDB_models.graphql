@@ -184,6 +184,8 @@ type DetailBanner {
   drinkContent: String!
   videoPath: String!
   sort: Int!
+  type: Int!
+  isPrepare: Boolean!
 }
 
 type WriterQna {
