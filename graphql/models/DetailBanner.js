@@ -8,7 +8,23 @@ const DetailBanner = new Schema(
       type: String,
       required: true,
     },
+    topTitle: {
+      type: String,
+      required: true,
+    },
+    topSubTitle: {
+      type: String,
+      required: true,
+    },
     topDescription: {
+      type: String,
+      required: true,
+    },
+    topTitle2: {
+      type: String,
+      required: true,
+    },
+    topDescription2: {
       type: String,
       required: true,
     },

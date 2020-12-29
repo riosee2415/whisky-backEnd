@@ -167,7 +167,11 @@ type EventBoard {
 type DetailBanner {
   _id: ID!
   topBannerPath: String!
+  topTitle: String!
+  topSubTitle: String!
   topDescription: String!
+  topTitle2: String!
+  topDescription2: String!
   writerImagePath1: String!
   writerImagePath2: String!
   writerDescription1: String!

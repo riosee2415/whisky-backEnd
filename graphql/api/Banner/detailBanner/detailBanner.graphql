@@ -5,7 +5,11 @@ type Query {
 type Mutation {
   modifyDetail(
     id: String!
+    topTitle: String!
+    topSubTitle: String!
     topDescription: String!
+    topTitle2: String!
+    topDescription2: String!
     writerDescription1: String!
     writerDescription2: String!
     drinkTitle: String!

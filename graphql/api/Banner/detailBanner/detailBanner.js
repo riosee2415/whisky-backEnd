@@ -42,7 +42,11 @@ export default {
     modifyDetail: async (_, args) => {
       const {
         id,
+        topTitle,
+        topSubTitle,
         topDescription,
+        topTitle2,
+        topDescription2,
         writerDescription1,
         writerDescription2,
         drinkTitle,
@@ -60,7 +64,11 @@ export default {
           { _id: id },
           {
             $set: {
+              topTitle,
+              topSubTitle,
               topDescription,
+              topTitle2,
+              topDescription2,
               writerDescription1,
               writerDescription2,
               drinkTitle,
